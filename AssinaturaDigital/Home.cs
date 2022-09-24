@@ -27,7 +27,7 @@ namespace AssinaturaDigital
             PKCS7 pkcs = new PKCS7(txtCertificado.Text, txtSenha.Text);
             DocMDPSignature docMdpSignature = new DocMDPSignature(pkcs, DocMDPAccessPermissions.FillingInForms);
             System.Drawing.Rectangle rect = new System.Drawing.Rectangle(100, 100, 600, 100);
-            signature.Certify(1, "Validação de teste", "Eliano Cordeiro", "Alfenas.MG", true, rect, docMdpSignature);
+            signature.Certify(1, "Validação de teste", "Davi Nascimento", "Alfenas.MG", true, rect, docMdpSignature);
             signature.Save(txtSalvar.Text+"Digitally Signed PDF.pdf");
 
             MessageBox.Show("Assinado com sucesso!");
